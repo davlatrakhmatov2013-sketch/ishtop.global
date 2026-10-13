@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Clear keyboard focus rings for WCAG 2.2 AA */
+  *:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Font size scaling for low-vision accessibility */
+html.a11y-font-large {
+  font-size: 112.5%;
+}
+
+html.a11y-font-xlarge {
+  font-size: 125%;
+}
+
+/* High contrast mode for visual accessibility */
+html.a11y-high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.a11y-high-contrast header,
+html.a11y-high-contrast footer,
+html.a11y-high-contrast section,
+html.a11y-high-contrast aside,
+html.a11y-high-contrast form,
+html.a11y-high-contrast table,
+html.a11y-high-contrast .bg-white,
+html.a11y-high-contrast .bg-slate-50,
+html.a11y-high-contrast .bg-slate-100,
+html.a11y-high-contrast .bg-blue-50,
+html.a11y-high-contrast .bg-blue-50\/60,
+html.a11y-high-contrast .bg-emerald-50\/60,
+html.a11y-high-contrast .bg-amber-50\/80 {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+  border-color: #fde047 !important;
+}
+
+html.a11y-high-contrast h1,
+html.a11y-high-contrast h2,
+html.a11y-high-contrast h3,
+html.a11y-high-contrast h4,
+html.a11y-high-contrast p,
+html.a11y-high-contrast span,
+html.a11y-high-contrast label,
+html.a11y-high-contrast td,
+html.a11y-high-contrast th {
+  color: #ffffff !important;
+}
+
+html.a11y-high-contrast input,
+html.a11y-high-contrast select,
+html.a11y-high-contrast textarea {
+  background-color: #000000 !important;
+  color: #fde047 !important;
+  border: 2px solid #ffffff !important;
+}
+
+html.a11y-high-contrast button.bg-blue-600,
+html.a11y-high-contrast button.bg-slate-900 {
+  background-color: #fde047 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Reduced motion mode */
+html.a11y-reduce-motion *,
+html.a11y-reduce-motion *::before,
+html.a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Large touch/click targets for mobility support (WCAG 2.5.8) */
+html.a11y-large-targets button,
+html.a11y-large-targets select,
+html.a11y-large-targets input[type="text"],
+html.a11y-large-targets input[type="email"],
+html.a11y-large-targets input[type="password"],
+html.a11y-large-targets input[type="number"] {
+  min-height: 44px !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+  }
+}
+

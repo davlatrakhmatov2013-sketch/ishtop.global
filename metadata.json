@@ -1,0 +1,6 @@
+{
+  "name": "IshTop Global — Professional Ish Topish Platformasi",
+  "description": "O‘zbekiston va xalqaro mehnat bozori uchun uch tilli professional ish qidirish, rezyume yaratish va ishga yollash platformasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
